@@ -27,10 +27,11 @@ Route::get('/', function () {
 
 // Single Listing 
 
-Route::get("/listings/{id}", function($id){
+// route model binding
+Route::get("/listings/{listing}", function(Listing $listing){
 
 return view("listing", [
-    "listing" => Listing::find($id)
+    "listing" => $listing
 ]);
 
 });
