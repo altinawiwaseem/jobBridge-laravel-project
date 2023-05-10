@@ -25,6 +25,10 @@ Route::get('/', [ListingController::class, "index"]);
 
 Route::get("/listings/create", [ListingController::class, "create"]);
 
+
+// Store Listing Data
+Route::post("/listings", [ListingController::class, "store"]);
+
 // Single Listing 
 
 // route model binding
