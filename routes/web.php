@@ -20,7 +20,14 @@ use App\Models\Listing;
 
 Route::get('/', [ListingController::class, "index"]);
 
+
+// show create Form
+
+Route::get("/listings/create", [ListingController::class, "create"]);
+
 // Single Listing 
 
 // route model binding
 Route::get("/listings/{listing}", [ListingController::class, "show"]);
+
+
